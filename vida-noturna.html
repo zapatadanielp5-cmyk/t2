@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Lima Gourmet - Vida Noturna</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&amp;family=Hanken+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-surface-variant": "#d0c5af",
+                    "on-secondary-fixed-variant": "#474646",
+                    "on-error-container": "#ffdad6",
+                    "error-container": "#93000a",
+                    "on-tertiary-fixed-variant": "#454747",
+                    "on-tertiary": "#2f3131",
+                    "on-error": "#690005",
+                    "inverse-primary": "#735c00",
+                    "primary-fixed": "#ffe088",
+                    "primary": "#f2ca50",
+                    "surface-container-highest": "#353535",
+                    "on-primary-fixed": "#241a00",
+                    "primary-fixed-dim": "#e9c349",
+                    "on-primary-container": "#554300",
+                    "tertiary-fixed-dim": "#c6c6c7",
+                    "secondary-container": "#4a4949",
+                    "secondary-fixed": "#e5e2e1",
+                    "on-secondary-container": "#bab8b7",
+                    "on-primary": "#3c2f00",
+                    "on-primary-fixed-variant": "#574500",
+                    "on-background": "#e5e2e1",
+                    "tertiary-container": "#b2b3b3",
+                    "surface-container-lowest": "#0e0e0e",
+                    "inverse-on-surface": "#313030",
+                    "surface-container": "#20201f",
+                    "surface": "#131313",
+                    "secondary-fixed-dim": "#c8c6c5",
+                    "surface-tint": "#e9c349",
+                    "primary-container": "#d4af37",
+                    "on-tertiary-fixed": "#1a1c1c",
+                    "inverse-surface": "#e5e2e1",
+                    "on-secondary": "#313030",
+                    "tertiary-fixed": "#e2e2e2",
+                    "outline-variant": "#4d4635",
+                    "background": "#131313",
+                    "outline": "#99907c",
+                    "surface-bright": "#393939",
+                    "on-surface": "#e5e2e1",
+                    "error": "#ffb4ab",
+                    "surface-dim": "#131313",
+                    "secondary": "#c8c6c5",
+                    "tertiary": "#cecece",
+                    "on-tertiary-container": "#434546",
+                    "surface-variant": "#353535",
+                    "surface-container-low": "#1b1b1b",
+                    "surface-container-high": "#2a2a2a",
+                    "on-secondary-fixed": "#1c1b1b"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "stack-md": "16px",
+                    "margin-desktop": "64px",
+                    "unit": "4px",
+                    "stack-sm": "8px",
+                    "stack-lg": "32px",
+                    "gutter": "24px",
+                    "stack-xl": "64px",
+                    "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                    "display-lg": ["Libre Caslon Text"],
+                    "label-caps": ["Hanken Grotesk"],
+                    "headline-sm": ["Libre Caslon Text"],
+                    "headline-md": ["Libre Caslon Text"],
+                    "label-md": ["Hanken Grotesk"],
+                    "body-lg": ["Hanken Grotesk"],
+                    "body-md": ["Hanken Grotesk"],
+                    "display-lg-mobile": ["Libre Caslon Text"]
+            },
+            "fontSize": {
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "400"}],
+                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "fontWeight": "500"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "display-lg-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+            -webkit-font-smoothing: antialiased;
+        }
+        .gold-border-subtle {
+            border: 1px solid rgba(212, 175, 55, 0.15);
+        }
+        .gold-gradient-overlay {
+            background: linear-gradient(0deg, rgba(19, 19, 19, 0.9) 0%, rgba(19, 19, 19, 0) 100%);
+        }
+        .text-glow {
+            text-shadow: 0 0 15px rgba(242, 202, 80, 0.3);
+        }
+        ::-webkit-scrollbar {
+            width: 4px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #131313;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #d4af37;
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md overflow-x-hidden">
+<header class="bg-background dark:bg-background border-b border-white/10 flex justify-between items-center px-margin-mobile w-full h-16 fixed top-0 z-50">
+<button class="hover:opacity-80 transition-opacity text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<button class="hover:opacity-80 transition-opacity text-primary">
+<span class="material-symbols-outlined">search</span>
+</button>
+</header>
+<main class="pt-24 pb-32 px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto">
+<section class="mb-stack-xl text-center md:text-left">
+<h2 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-primary mb-2 tracking-tight">VIDA NOTURNA LIMEÑA</h2>
+<p class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest italic">Cultura, Ritmo e Sabor</p>
+</section>
+<section class="mb-stack-xl">
+<div class="flex items-center gap-4 mb-stack-lg">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Barranco</h3>
+<span class="h-px flex-1 bg-white/10"></span>
+<span class="font-label-caps text-label-caps text-primary">(A vibra boêmia e cultural)</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<article class="relative group overflow-hidden bg-surface-container-low gold-border-subtle transition-all duration-500 hover:-translate-y-1" style="opacity: 1; transform: translateY(0px); transition: opacity 0.8s, transform 0.8s;">
+<div class="aspect-[3/4] relative">
+<img class="w-full h-full object-cover" data-alt="A moody, cinematic photograph of La Noche de Barranco interior, showing a dimly lit historic stage with a jazz band performing. Warm amber spotlighting catches the smoke in the air and the rich wood textures of the colonial architecture. The atmosphere is sophisticated and intimate, with deep blacks and vibrant golden hues reflecting the Lima Gourmet brand aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9ZY37_3-gHnzo47BKNSv1GKh6NXr5B7G-upMyKHOYg-OI1hQVAlhbknbOyFj_lDKuIOqHXS8vDSh-BSuiNWFnvKC7qejhPQV_0eza55rm0-X7vsOX8OsMMpueDXFlOY5lNqdSjJ3QqAGgM7uubfwCXrs42DCrT_zvAMYm_LweufdF818RehunML6lgPlcyIHIMYxNm7xASj1qOhVH2sKCtRj6Kq3vic324rDjBKExJL0iYJn4NzQW-gZlJfCodv98BszcOCeLCJg"/>
+<div class="absolute inset-0 gold-gradient-overlay"></div>
+<div class="absolute bottom-0 p-stack-md w-full">
+<h4 class="font-headline-sm text-headline-sm text-primary mb-1">La Noche de Barranco</h4>
+<p class="font-label-caps text-[10px] text-on-surface-variant mb-3">SHOWS AO VIVO</p>
+</div>
+</div>
+<div class="p-stack-md space-y-3">
+<div class="flex justify-between text-label-md">
+<span class="text-on-surface-variant">Cover: S/ 30 - S/ 60</span>
+<span class="text-primary font-bold">US$ 8 - 16</span>
+</div>
+<p class="text-body-md text-on-surface-variant/80 italic leading-relaxed">
+                            "O melhor lugar para rock e jazz ao vivo em uma atmosfera histórica."
+                        </p>
+<div class="pt-2 border-t border-white/5">
+<span class="text-label-caps text-primary">BEBIDAS: S/ 15 - S/ 30</span>
+</div>
+</div>
+</article>
+<article class="relative group overflow-hidden bg-surface-container-low gold-border-subtle transition-all duration-500 hover:-translate-y-1" style="opacity: 1; transform: translateY(0px); transition: opacity 0.8s, transform 0.8s;">
+<div class="aspect-[3/4] relative">
+<img class="w-full h-full object-cover" data-alt="An expansive view of the Ayahuasca Restobar interior, a grand republican-era mansion in Barranco. The image captures the ornate architectural details, high ceilings, and eclectic colorful lighting illuminating various rooms. High-end cocktail photography style, moody shadows, and a sense of exclusive nightlife luxury. The palette is dominated by dark wood and golden accent lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDy6oO0tuagfNqUlWQFjiNOKZuguFycBTZ7_v1W5y_SRDp1dVu0LAdolVK3aS8Km2RQ6bTVIn0vojgvh83avUroK8vJoPlR3-W0chogppK4o9U8dkk2oFFVYzjBHusMLoe9ibtb66Mw9Lw_BkRkrHEs6-olYFv5A3CF4sVWWLaeRto3HU26wpUS3rmB5XLrre_U_42mgkUagM0ok5MRWjMYrr4YH4e6GkVmdyvj3qoVwS9uH4jItfyRpg4tIQE9xMmim12dAbJ4KLc"/>
+<div class="absolute inset-0 gold-gradient-overlay"></div>
+<div class="absolute bottom-0 p-stack-md w-full">
+<h4 class="font-headline-sm text-headline-sm text-primary mb-1">Ayahuasca Restobar</h4>
+<p class="font-label-caps text-[10px] text-on-surface-variant mb-3">CASARÃO ICÔNICO</p>
+</div>
+</div>
+<div class="p-stack-md space-y-3">
+<div class="flex justify-between text-label-md">
+<span class="text-on-surface-variant">Entrada gratuita</span>
+<span class="text-primary font-bold">N/A</span>
+</div>
+<p class="text-body-md text-on-surface-variant/80 italic leading-relaxed">
+                            "Imperdível para provar macerados de pisco em uma arquitetura republicana impressionante."
+                        </p>
+<div class="pt-2 border-t border-white/5">
+<span class="text-label-caps text-primary">COQUETÉIS: S/ 35 - S/ 48</span>
+</div>
+</div>
+</article>
+<article class="relative group overflow-hidden bg-surface-container-low gold-border-subtle transition-all duration-500 hover:-translate-y-1" style="opacity: 1; transform: translateY(0px); transition: opacity 0.8s, transform 0.8s;">
+<div class="aspect-[3/4] relative">
+<img class="w-full h-full object-cover" data-alt="A chic outdoor terrace scene at Victoria Bar in Barranco. The shot features stylish people enjoying creative cocktails under soft string lights and lush greenery. The photography is high-fashion editorial style with a shallow depth of field, emphasizing the golden glow of the drinks. Minimalist luxury aesthetic with rich dark backgrounds and crisp details." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC61KgFHA-NwZl-X89ud8rxRk8RGbSgAo7x7rjTRG5RYNtBhrgtEKpi-K-vnpRjzd_c0EmQ0w_ir1S82RIJNcr5zWIDFG3u-U4EDVONq4Xoq5y9rgNT_ehzt5nqbiBqvSACl_ZkTKVrQPm6AUuEJzARvOM-wgVuEB0bjpfep3ngkpsmAA3CnCwN0igZ2iXocWtP4FN17RmVe1_Ovi6toBvNbomsKyPZMu4CFeZhocxjF6Co8hxcBqTbBGWHcfxj18vXeg1GTkrIH3s"/>
+<div class="absolute inset-0 gold-gradient-overlay"></div>
+<div class="absolute bottom-0 p-stack-md w-full">
+<h4 class="font-headline-sm text-headline-sm text-primary mb-1">Victoria Bar</h4>
+<p class="font-label-caps text-[10px] text-on-surface-variant mb-3">TERRAÇO &amp; DRINKS CRIATIVOS</p>
+</div>
+</div>
+<div class="p-stack-md space-y-3">
+<div class="flex justify-between text-label-md">
+<span class="text-on-surface-variant">Entrada gratuita</span>
+<span class="text-primary font-bold">N/A</span>
+</div>
+<p class="text-body-md text-on-surface-variant/80 italic leading-relaxed">
+                            "Ideal para uma noite relaxada com amigos em seu belo terraço."
+                        </p>
+<div class="pt-2 border-t border-white/5">
+<span class="text-label-caps text-primary">COQUETÉIS: S/ 32 - S/ 45</span>
+</div>
+</div>
+</article>
+</div>
+</section>
+<section class="mb-stack-xl">
+<div class="flex items-center gap-4 mb-stack-lg">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Miraflores</h3>
+<span class="h-px flex-1 bg-white/10"></span>
+<span class="font-label-caps text-label-caps text-primary">(A cena moderna e de festa)</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<article class="flex flex-col md:flex-row bg-surface-container-low gold-border-subtle overflow-hidden" style="opacity: 1; transform: translateY(0px); transition: opacity 0.8s, transform 0.8s;">
+<div class="w-full md:w-1/2 aspect-video md:aspect-square">
+<img class="w-full h-full object-cover" data-alt="A dynamic, blurred-motion shot of Bizarro nightclub in Miraflores. The image shows neon violet and gold light trails against a dark, sophisticated club interior. The vibe is high-energy yet elite, capturing the essence of modern electronic music nightlife in Lima. Professional photography with rich contrast and deep black tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuATPfKRXgENZEJljYTz2SveiQG7eRjF5Xa9Xugjzz_rNFHNi1nxXbLNuJfYTSx5YOOJoUGUziK23wCTVix7gXTFLFdeT2PQgxf01zW1J3hgAzAN2WkRHBbtbQzYd4PaVcbIkkWn3QWs4OwkMcw36yetJyrQ5k7ieEgHPoZw-PSSPNqC2Cts-yAxxeQ10kj9gQLfDLv3h6w60_bH7BcT9_R-PuxxUtwOQhb1VdSITAkooNx247uRlxPpv48wFE5gDQyzYEqftoQd6p0"/>
+</div>
+<div class="w-full md:w-1/2 p-stack-lg flex flex-col justify-center">
+<h4 class="font-headline-md text-headline-md text-primary mb-2">Bizarro</h4>
+<p class="font-label-caps text-label-caps text-on-surface-variant mb-4">DISCOTECA POPULAR</p>
+<p class="text-body-md text-on-surface mb-6 italic">"Para dançar até o amanhecer com os melhores hits modernos e eletrônica."</p>
+<div class="grid grid-cols-2 gap-4 border-t border-white/10 pt-4">
+<div>
+<p class="text-[10px] text-on-surface-variant uppercase mb-1">Cover</p>
+<p class="text-label-md text-primary">S/ 40 - S/ 70</p>
+</div>
+<div>
+<p class="text-[10px] text-on-surface-variant uppercase mb-1">Tragos</p>
+<p class="text-label-md text-primary">S/ 25 - S/ 40</p>
+</div>
+</div>
+</div>
+</article>
+<article class="flex flex-col md:flex-row bg-surface-container-low gold-border-subtle overflow-hidden" style="opacity: 1; transform: translateY(0px); transition: opacity 0.8s, transform 0.8s;">
+<div class="w-full md:w-1/2 aspect-video md:aspect-square">
+<img class="w-full h-full object-cover" data-alt="Interior of Help! Retro Bar in Miraflores, showcasing vibrant 80s and 90s pop-culture decor with a luxurious dark twist. Retro neon signs, vintage posters behind glass, and a stylish crowd. The lighting is cinematic, highlighting the nostalgic yet upscale atmosphere. Elite nightlife photography focusing on texture and mood." src="https://lh3.googleusercontent.com/aida-public/AB6AXuByTtJ8jz6lhqeDQL2B-7T7REQlJ1PQ7jYJ8-ChkGoEAYzPM09LPpyWN5iL2IptfnEY8be9PjzkwBzsIDfl8vWAF59aGf4aRlif8DR8SdzTwAqGzyyEFZD4WFwVEW428RAUUprLLSzJepaNdxixvYMAhZjIi1uOcRn61b8-JgKmJaxURe8vtY9ZkSd7GSE2f_Y-bybC03eRQ60HhJnIGRpUddHwe0t_iaR-3Ic5qgBWbp5d-jxpwbzQrCSM1r-WCKprBk9y_OIIpM0"/>
+</div>
+<div class="w-full md:w-1/2 p-stack-lg flex flex-col justify-center">
+<h4 class="font-headline-md text-headline-md text-primary mb-2">Help! Retro Bar</h4>
+<p class="font-label-caps text-label-caps text-on-surface-variant mb-4">FESTA TEMÁTICA 80S/90S</p>
+<p class="text-body-md text-on-surface mb-6 italic">"O plano perfeito se você ama música retrô e o ambiente pop-rock."</p>
+<div class="grid grid-cols-2 gap-4 border-t border-white/10 pt-4">
+<div>
+<p class="text-[10px] text-on-surface-variant uppercase mb-1">Cover</p>
+<p class="text-label-md text-primary">S/ 30 - S/ 50</p>
+</div>
+<div>
+<p class="text-[10px] text-on-surface-variant uppercase mb-1">Bebidas</p>
+<p class="text-label-md text-primary">S/ 15 - S/ 30</p>
+</div>
+</div>
+</div>
+</article>
+</div>
+</section>
+<section class="mt-stack-xl p-stack-lg bg-surface-container-highest/30 border border-primary/20 rounded-lg">
+<div class="flex items-center gap-3 mb-stack-md">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">gpp_maybe</span>
+<h3 class="font-label-caps text-label-caps text-primary tracking-[0.2em]">DICAS DE SEGURANÇA</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-stack-lg">
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-on-surface-variant text-sm">local_taxi</span>
+<p class="text-body-md text-on-surface-variant/90 leading-relaxed">Desloque-se sempre em aplicativos de táxi seguros como Uber ou Cabify.</p>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-on-surface-variant text-sm">block</span>
+<p class="text-body-md text-on-surface-variant/90 leading-relaxed">Evite pegar táxis de rua à noite.</p>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-on-surface-variant text-sm">lock</span>
+<p class="text-body-md text-on-surface-variant/90 leading-relaxed">Mantenha seus pertences por perto em locais movimentados.</p>
+</div>
+</div>
+</section>
+</main>
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 bg-surface border-t border-white/10">
+<button class="flex flex-col items-center justify-center text-secondary-fixed-dim hover:text-primary-fixed transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined">explore</span>
+<span class="font-label-caps text-[10px] mt-1">Explorar</span>
+</button>
+<button class="flex flex-col items-center justify-center text-secondary-fixed-dim hover:text-primary-fixed transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined">star</span>
+<span class="font-label-caps text-[10px] mt-1">Favoritos</span>
+</button>
+<button class="flex flex-col items-center justify-center text-primary font-bold transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">map</span>
+<span class="font-label-caps text-[10px] mt-1">Guias</span>
+</button>
+<button class="flex flex-col items-center justify-center text-secondary-fixed-dim hover:text-primary-fixed transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label-caps text-[10px] mt-1">Perfil</span>
+</button>
+</nav>
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const articles = document.querySelectorAll('article');
+            articles.forEach((article, index) => {
+                article.style.opacity = '0';
+                article.style.transform = 'translateY(20px)';
+                setTimeout(() => {
+                    article.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+                    article.style.opacity = '1';
+                    article.style.transform = 'translateY(0)';
+                }, index * 150);
+            });
+        });
+    </script>
+</body></html>
